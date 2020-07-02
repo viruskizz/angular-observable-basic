@@ -1,0 +1,35 @@
+<h5 *ngIf="!profile" class="card-title text-center">Please select user</h5>
+
+<div *ngIf="profile" class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0 mt-2 mt-2">
+        <div class="col-md-4">
+            <img [src]="profile.avatar" alt="avatar">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{profile.displayName}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{profile.firstname}} {{profile.lastname}}</h6>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let score of profile.scores">
+                        <span class="float-left">{{score.game}}</span>
+                        <span class="float-right">{{score.point}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div *ngIf="profileAsync | async as profile" class="card" style="width: 18rem;">-->
+    <!--<img [src]="profile.avatar" class="card-img-top" alt="avatar">-->
+    <!--<div class="card-body">-->
+        <!--<h5 class="card-title">{{profile.displayName}}</h5>-->
+        <!--<h6 class="card-subtitle mb-2 text-muted">{{profile.firstname}} {{profile.lastname}}</h6>-->
+        <!--<ul class="list-group list-group-flush">-->
+            <!--<li class="list-group-item" *ngFor="let score of profile.scores">-->
+                <!--<span class="float-left">{{score.game}}</span>-->
+                <!--<span class="float-right">{{score.point}}</span>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+    <!--</div>-->
+<!--</div>-->

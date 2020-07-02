@@ -1,0 +1,8 @@
+<ul class="list-group">
+    <li *ngFor="let element of list; let i = index"
+        class="list-group-item"
+        (click)="onSelect(i)">
+        <span class="float-left">{{element.displayName}}</span>
+        <span class="float-right">{{sumPoint(element.scores)}}</span>
+    </li>
+</ul>
