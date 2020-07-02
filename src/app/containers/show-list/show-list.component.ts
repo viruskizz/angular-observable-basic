@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Profile} from '../../interfaces/profile.interface';
-import {ProfileService} from '../../services/profile.service';
-import {DatabaseService} from 'src/app/services/database.service';
 import {Score} from '../../interfaces/game.interface';
-import {from, of} from 'rxjs';
-import {reduce} from 'rxjs/operators';
+import {ProfileService} from '../../services/profile.service';
+import {DatabaseService} from '../../services/database.service';
 
 @Component({
   selector: 'app-show-list',

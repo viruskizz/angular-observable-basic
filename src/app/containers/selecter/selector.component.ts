@@ -14,6 +14,7 @@ export class SelectorComponent implements OnInit {
   constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
+    // ทำ operation map เพื่อเปลี่ยนแปลงค่าจาก index เป็นค่าของตัวเลขลำดับที่ขึ้นต้นด้วย 1
     this.number = this.profileService.currentIndex$.pipe(
       map(value => value + 1)
     );
