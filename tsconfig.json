@@ -22,5 +22,10 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
+  },
+  "paths": {
+    "core-js/es/reflect": [
+      "../node_modules/core-js/es/reflect"
+    ]
   }
 }
